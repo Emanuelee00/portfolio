@@ -79,6 +79,7 @@ def deploy(clone_url: str, config: dict) -> str:
     port = config["port"]
     branch = config.get("branch", "main")
     workspace = WORKSPACES_DIR / slug
+    build_context = workspace / config.get("path", ".")
 
     if workspace.exists():
         run(["git", "fetch", "origin"], cwd=workspace)
@@ -87,10 +88,10 @@ def deploy(clone_url: str, config: dict) -> str:
         run(["git", "clone", "--branch", branch, clone_url, str(workspace)])
 
     dockerfile = DOCKERFILES_DIR / slug / "Dockerfile"
-    shutil.copy(dockerfile, workspace / "Dockerfile")
+    shutil.copy(dockerfile, build_context / "Dockerfile")
 
     image_tag = f"{slug}:latest"
-    run(["docker", "build", "-t", image_tag, "."], cwd=workspace)
+    run(["docker", "build", "-t", image_tag, "."], cwd=build_context)
 
     container_name = f"proj-{slug}"
     subprocess.run(["docker", "rm", "-f", container_name], capture_output=True)

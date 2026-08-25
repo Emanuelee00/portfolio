@@ -1,0 +1,14 @@
+http:
+  routers:
+    emanuele:
+      rule: Host(`emanuele.92-4-217-42.sslip.io`)
+      entryPoints:
+      - websecure
+      service: emanuele
+      tls:
+        certResolver: le
+  services:
+    emanuele:
+      loadBalancer:
+        servers:
+        - url: http://proj-emanuele:80
