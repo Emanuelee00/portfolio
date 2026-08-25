@@ -22,6 +22,7 @@ No error handling for impossible scenarios.
 If you write 200 lines and it could be 50, rewrite it.
 Ask yourself: "Would a senior engineer say this is overcomplicated?" If yes, simplify.
 Max 5 functions per page.
+No more than 30 lines per funcition.
 
 3. Surgical Changes
 Touch only what you must. Clean up only your own mess.
