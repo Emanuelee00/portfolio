@@ -2,6 +2,7 @@ import hashlib
 import hmac
 import logging
 import os
+import shutil
 import subprocess
 from pathlib import Path
 
@@ -15,6 +16,7 @@ app = FastAPI()
 
 WORKSPACES_DIR = Path("/home/ubuntu/portfolio/deploy-platform/workspaces")
 DYNAMIC_DIR = Path("/home/ubuntu/portfolio/deploy-platform/traefik/dynamic")
+DOCKERFILES_DIR = Path("/home/ubuntu/portfolio/deploy-platform/dockerfiles")
 PROJECTS_FILE = Path("/home/ubuntu/portfolio/orchestrator/projects.yaml")
 BASE_DOMAIN = "92-4-217-42.sslip.io"
 WEBHOOK_SECRET = os.environ["WEBHOOK_SECRET"]
@@ -83,6 +85,9 @@ def deploy(clone_url: str, config: dict) -> str:
         run(["git", "reset", "--hard", f"origin/{branch}"], cwd=workspace)
     else:
         run(["git", "clone", "--branch", branch, clone_url, str(workspace)])
+
+    dockerfile = DOCKERFILES_DIR / slug / "Dockerfile"
+    shutil.copy(dockerfile, workspace / "Dockerfile")
 
     image_tag = f"{slug}:latest"
     run(["docker", "build", "-t", image_tag, "."], cwd=workspace)
