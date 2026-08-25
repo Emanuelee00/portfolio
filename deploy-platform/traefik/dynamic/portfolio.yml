@@ -1,0 +1,14 @@
+http:
+  routers:
+    portfolio:
+      rule: Host(`portfolio.92-4-217-42.sslip.io`)
+      entryPoints:
+      - websecure
+      service: portfolio
+      tls:
+        certResolver: le
+  services:
+    portfolio:
+      loadBalancer:
+        servers:
+        - url: http://proj-portfolio:80

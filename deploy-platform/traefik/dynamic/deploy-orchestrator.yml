@@ -1,0 +1,15 @@
+http:
+  routers:
+    deploy-orchestrator:
+      rule: "Host(`deploy.92-4-217-42.sslip.io`)"
+      entryPoints:
+        - websecure
+      service: deploy-orchestrator
+      tls:
+        certResolver: le
+
+  services:
+    deploy-orchestrator:
+      loadBalancer:
+        servers:
+          - url: "http://host.docker.internal:9000"

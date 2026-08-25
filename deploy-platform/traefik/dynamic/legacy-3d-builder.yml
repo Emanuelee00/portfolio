@@ -1,0 +1,15 @@
+http:
+  routers:
+    legacy-3d-builder:
+      rule: "Host(`92-4-217-42.sslip.io`)"
+      entryPoints:
+        - websecure
+      service: legacy-3d-builder
+      tls:
+        certResolver: le
+
+  services:
+    legacy-3d-builder:
+      loadBalancer:
+        servers:
+          - url: "http://host.docker.internal:3000"
