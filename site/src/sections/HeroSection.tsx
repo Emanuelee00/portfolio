@@ -6,7 +6,12 @@ import { navLinks } from "../content/data";
 
 function Navbar() {
   return (
-    <FadeIn as="nav" delay={0} y={-20} className="flex justify-between px-6 pt-6 md:px-10 md:pt-8">
+    <FadeIn
+      as="nav"
+      delay={0}
+      y={-20}
+      className="relative z-20 flex justify-between px-6 pt-6 md:px-10 md:pt-8"
+    >
       {navLinks.map((link) => (
         <a
           key={link.label}
