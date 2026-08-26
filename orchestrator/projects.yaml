@@ -13,3 +13,9 @@ Emanuelee00/Pacman:
   slug: pacman
   port: 80
   branch: wasm-web
+
+Emanuelee00/Project_ETF:
+  slug: etf
+  port: 8000
+  branch: main
+  path: python_project

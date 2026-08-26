@@ -1,0 +1,14 @@
+http:
+  routers:
+    etf:
+      rule: Host(`etf.92-4-217-42.sslip.io`)
+      entryPoints:
+      - websecure
+      service: etf
+      tls:
+        certResolver: le
+  services:
+    etf:
+      loadBalancer:
+        servers:
+        - url: http://proj-etf:8000

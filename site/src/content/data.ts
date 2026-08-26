@@ -57,6 +57,12 @@ export const projects = [
     name: "Pacman — Python compiled to WebAssembly",
     liveUrl: "https://pacman.92-4-217-42.sslip.io",
   },
+  {
+    number: "04",
+    category: "Personal",
+    name: "ETF Portfolio Analyzer",
+    liveUrl: "https://etf.92-4-217-42.sslip.io",
+  },
 ];
 
 export const aboutText =
