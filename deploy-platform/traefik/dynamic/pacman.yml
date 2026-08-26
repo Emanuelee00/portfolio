@@ -1,0 +1,14 @@
+http:
+  routers:
+    pacman:
+      rule: Host(`pacman.92-4-217-42.sslip.io`)
+      entryPoints:
+      - websecure
+      service: pacman
+      tls:
+        certResolver: le
+  services:
+    pacman:
+      loadBalancer:
+        servers:
+        - url: http://proj-pacman:80

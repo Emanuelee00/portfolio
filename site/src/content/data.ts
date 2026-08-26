@@ -51,6 +51,12 @@ export const projects = [
     name: "Self-Hosted Deploy Platform",
     liveUrl: "https://github.com/Emanuelee00/portfolio",
   },
+  {
+    number: "03",
+    category: "Personal",
+    name: "Pacman — Python compiled to WebAssembly",
+    liveUrl: "https://pacman.92-4-217-42.sslip.io",
+  },
 ];
 
 export const aboutText =
