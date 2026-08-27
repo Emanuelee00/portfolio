@@ -1,7 +1,12 @@
+import spaceImg from "../assets/projects/space.jpg";
+import freshRouteImg from "../assets/projects/fresh-route.jpg";
+import etfImg from "../assets/projects/etf.jpg";
+import pacmanImg from "../assets/projects/pacman.jpg";
+
 export const navLinks = [
+  { label: "Work", href: "#work" },
   { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "mailto:emanuele.ielmini@gmail.com" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export const services = [
@@ -37,42 +42,70 @@ export const services = [
   },
 ];
 
-export const projects = [
+export type Project = {
+  number: string;
+  name: string;
+  blurb: string;
+  tech: string[];
+  liveUrl?: string;
+  codeUrl?: string;
+  image?: string;
+};
+
+export const projects: Project[] = [
   {
     number: "01",
-    category: "Personal",
-    name: "3D Space Portfolio",
-    liveUrl: "https://portfolio.92-4-217-42.sslip.io",
+    name: "Fresh Route",
+    blurb:
+      "Heat-aware pedestrian routing for Marseille — a 3D point-cloud model of the city that finds the coolest walking path on a hot day.",
+    tech: ["React", "Three.js", "Python", "Routing engine"],
+    liveUrl: "https://fresh-route.92-4-217-42.sslip.io",
+    image: freshRouteImg,
   },
   {
     number: "02",
-    category: "Personal",
-    name: "Self-Hosted Deploy Platform",
-    liveUrl: "https://github.com/Emanuelee00/portfolio",
+    name: "ETF Portfolio Analyzer",
+    blurb:
+      "Upload a portfolio spreadsheet and get a full risk-and-allocation breakdown plus a polished Excel report to take away.",
+    tech: ["React", "FastAPI", "pandas"],
+    liveUrl: "https://etf.92-4-217-42.sslip.io",
+    codeUrl: "https://github.com/Emanuelee00/Project_ETF",
+    image: etfImg,
   },
   {
     number: "03",
-    category: "Personal",
-    name: "Pacman — Python compiled to WebAssembly",
+    name: "Pacman — Python in the browser",
+    blurb:
+      "The arcade classic written in Python, compiled to WebAssembly and running in the browser at native speed — no server, no install.",
+    tech: ["Python", "Pygame", "WASM / pygbag"],
     liveUrl: "https://pacman.92-4-217-42.sslip.io",
+    codeUrl: "https://github.com/Emanuelee00/Pacman",
+    image: pacmanImg,
   },
   {
     number: "04",
-    category: "Personal",
-    name: "ETF Portfolio Analyzer",
-    liveUrl: "https://etf.92-4-217-42.sslip.io",
+    name: "3D Space Portfolio",
+    blurb:
+      "An earlier take on this site: a navigable galaxy where each star system is a project, built with React Three Fiber.",
+    tech: ["React", "Three.js", "React Three Fiber"],
+    liveUrl: "https://portfolio.92-4-217-42.sslip.io",
+    image: spaceImg,
   },
   {
     number: "05",
-    category: "Personal",
-    name: "Fresh Route — Marseille Heat-Aware Routing",
-    liveUrl: "https://fresh-route.92-4-217-42.sslip.io",
+    name: "Self-Hosted Deploy Platform",
+    blurb:
+      "The pipeline behind these projects: a git push builds a Docker image and Traefik serves it on its own HTTPS subdomain.",
+    tech: ["Docker", "Traefik", "CI/CD", "Linux"],
+    codeUrl: "https://github.com/Emanuelee00/portfolio",
   },
   {
     number: "06",
-    category: "Personal",
     name: "SANS CTF Write-ups",
-    liveUrl: "https://github.com/Emanuelee00/sans-ctf-writeups",
+    blurb:
+      "Solutions from SANS capture-the-flag events — reversing, pwn, web and crypto — collected as sanitised notes.",
+    tech: ["Reversing", "pwn", "Web", "Crypto"],
+    codeUrl: "https://github.com/Emanuelee00/sans-ctf-writeups",
   },
 ];
 
