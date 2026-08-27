@@ -62,6 +62,12 @@ export const projects = [
     name: "ETF Portfolio Analyzer",
     liveUrl: "https://etf.92-4-217-42.sslip.io",
   },
+  {
+    number: "05",
+    category: "Personal",
+    name: "Fresh Route — Marseille Heat-Aware Routing",
+    liveUrl: "https://fresh-route.92-4-217-42.sslip.io",
+  },
 ];
 
 export const aboutText =
