@@ -1,6 +1,4 @@
-import { User } from "lucide-react";
 import { FadeIn } from "../components/FadeIn";
-import { Magnet } from "../components/Magnet";
 import { ContactButton } from "../components/ContactButton";
 import { navLinks } from "../content/data";
 
@@ -21,22 +19,6 @@ function Navbar() {
           {link.label}
         </a>
       ))}
-    </FadeIn>
-  );
-}
-
-function HeroPortrait() {
-  return (
-    <FadeIn
-      delay={0.6}
-      y={30}
-      className="absolute left-1/2 top-1/2 z-10 w-[280px] -translate-x-1/2 -translate-y-1/2 sm:top-auto sm:bottom-0 sm:w-[360px] sm:translate-y-0 md:w-[440px] lg:w-[520px]"
-    >
-      <Magnet padding={150} strength={3}>
-        <div className="flex aspect-[4/5] w-full items-center justify-center rounded-[40px] border border-border bg-surface">
-          <User className="h-1/4 w-1/4 text-muted" strokeWidth={1} />
-        </div>
-      </Magnet>
     </FadeIn>
   );
 }
@@ -69,8 +51,6 @@ export function HeroSection() {
         <FadeIn delay={0.5} y={20}>
           <ContactButton />
         </FadeIn>
-
-        <HeroPortrait />
       </div>
     </section>
   );
