@@ -63,7 +63,7 @@ export function HeroSection() {
         </FadeIn>
         <FadeIn delay={0.18} y={40}>
           <h1 className="mt-5 font-black uppercase leading-[0.86] tracking-[-0.03em]" style={{ fontSize: "clamp(3rem, 15vw, 12rem)" }}>
-            <span className="block text-foreground">Emanuele</span>
+            <span className="block text-red-500">Emanuele</span>
             <span className="block text-primary sm:ml-[0.15em]">Ielmini</span>
           </h1>
         </FadeIn>
