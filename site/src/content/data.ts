@@ -68,6 +68,12 @@ export const projects = [
     name: "Fresh Route — Marseille Heat-Aware Routing",
     liveUrl: "https://fresh-route.92-4-217-42.sslip.io",
   },
+  {
+    number: "06",
+    category: "Personal",
+    name: "SANS CTF Write-ups",
+    liveUrl: "https://github.com/Emanuelee00/sans-ctf-writeups",
+  },
 ];
 
 export const aboutText =
