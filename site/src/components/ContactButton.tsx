@@ -1,8 +1,11 @@
+import { useI18n } from "../i18n";
+
 interface ContactButtonProps {
   href?: string;
 }
 
 export function ContactButton({ href = "mailto:emanuele.ielmini@gmail.com" }: ContactButtonProps) {
+  const { copy } = useI18n();
   return (
     <a
       href={href}
@@ -12,7 +15,7 @@ export function ContactButton({ href = "mailto:emanuele.ielmini@gmail.com" }: Co
         boxShadow: "0 0 32px rgba(34, 212, 114, 0.25), 0 4px 12px rgba(24, 163, 85, 0.3)",
       }}
     >
-      Contact Me
+      {copy.contactMe}
     </a>
   );
 }

@@ -3,12 +3,6 @@ import freshRouteImg from "../assets/projects/fresh-route.jpg";
 import etfImg from "../assets/projects/etf.jpg";
 import pacmanImg from "../assets/projects/pacman.jpg";
 
-export const navLinks = [
-  { label: "Work", href: "#work" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
-];
-
 export const services = [
   {
     number: "01",
@@ -108,6 +102,3 @@ export const projects: Project[] = [
     codeUrl: "https://github.com/Emanuelee00/sans-ctf-writeups",
   },
 ];
-
-export const aboutText =
-  "Full-stack developer with a background in cybersecurity, I build web applications and the infrastructure that runs them — from the interface down to the container. I enjoy working close to the system: fast frontends, clean APIs, and deploy pipelines that just work. Let's build something solid together!";
