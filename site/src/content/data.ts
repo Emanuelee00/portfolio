@@ -41,6 +41,7 @@ export type Project = {
   name: string;
   blurb: string;
   tech: string[];
+  context?: string;
   liveUrl?: string;
   codeUrl?: string;
   image?: string;
@@ -100,5 +101,45 @@ export const projects: Project[] = [
       "Solutions from SANS capture-the-flag events — reversing, pwn, web and crypto — collected as sanitised notes.",
     tech: ["Reversing", "pwn", "Web", "Crypto"],
     codeUrl: "https://github.com/Emanuelee00/sans-ctf-writeups",
+  },
+  {
+    number: "07",
+    name: "Third-Party Risk Analysis (AI)",
+    blurb:
+      "Client project with CMA CGM and Mistral AI (hackathon). Details are confidential — happy to walk through it in an interview.",
+    tech: ["Mistral workflows", "React", "LLM"],
+    context: "CMA CGM × Mistral AI",
+  },
+  {
+    number: "08",
+    name: "Maritime Route Optimisation",
+    blurb:
+      "Client project with CMA CGM (graph-theory workshop). Details are confidential — happy to walk through it in an interview.",
+    tech: ["Python", "Graph theory"],
+    context: "CMA CGM",
+  },
+  {
+    number: "09",
+    name: "Inception",
+    blurb:
+      "A fully containerised infrastructure built from scratch for École 42: NGINX with TLS, WordPress and MariaDB in separate images, orchestrated with Docker Compose and hand-written Dockerfiles (no ready-made images). Source stays private under École 42's policy — I can walk through the architecture.",
+    tech: ["Docker", "NGINX", "MariaDB"],
+    context: "École 42",
+  },
+  {
+    number: "10",
+    name: "42 Core Projects (C & Python)",
+    blurb:
+      "École 42 systems and algorithms projects — Libft (a C standard-library reimplementation), Push_swap (sorting with a minimal instruction set), plus Python work on multithreading, RAG and constrained decoding. Low-level memory management and debugging throughout. Source stays private under École 42's policy.",
+    tech: ["C", "Python", "Algorithms"],
+    context: "École 42",
+  },
+  {
+    number: "11",
+    name: "Mosquito Movement Prediction",
+    blurb:
+      "A 48-hour hackathon MVP (ZEBOX × Qista): predicting mosquito-population movement in space and time from environmental data, pitched to investors at the end.",
+    tech: ["Python", "Spatio-temporal modelling"],
+    context: "ZEBOX × Qista",
   },
 ];

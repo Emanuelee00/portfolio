@@ -3,6 +3,7 @@ import { useI18n } from "../i18n";
 
 const email = "emanuele.ielmini@gmail.com";
 const github = "https://github.com/Emanuelee00";
+const linkedin = "https://www.linkedin.com/in/emanuele-ielmini-680a2b417";
 
 export function ContactSection() {
   const { copy } = useI18n();
@@ -26,6 +27,9 @@ export function ContactSection() {
           </a>
           <a href={github} target="_blank" rel="noreferrer" className="text-foreground/60 transition-colors hover:text-foreground">
             github.com/Emanuelee00
+          </a>
+          <a href={linkedin} target="_blank" rel="noreferrer" className="text-foreground/60 transition-colors hover:text-foreground">
+            linkedin.com/in/emanuele-ielmini
           </a>
         </FadeIn>
       </div>

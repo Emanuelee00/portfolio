@@ -6,7 +6,7 @@ function ProjectMedia({ project }: { project: Project }) {
   if (!project.image) {
     return (
       <div className="flex aspect-[16/10] items-center justify-center rounded-3xl border border-border bg-surface">
-        <span className="font-mono text-sm text-muted">{project.codeUrl?.replace("https://github.com/", "")}</span>
+        <span className="font-mono text-sm text-muted">{project.context ?? project.codeUrl?.replace("https://github.com/", "")}</span>
       </div>
     );
   }
@@ -24,6 +24,7 @@ function ProjectMedia({ project }: { project: Project }) {
 
 function ProjectLinks({ project }: { project: Project }) {
   const { copy } = useI18n();
+  if (!project.liveUrl && !project.codeUrl) return null;
   const btn =
     "inline-flex items-center gap-2 rounded-full border border-foreground/25 px-5 py-2 font-mono text-[11px] uppercase tracking-wider transition-colors";
   return (
