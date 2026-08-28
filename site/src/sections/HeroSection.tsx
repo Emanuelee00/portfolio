@@ -61,6 +61,11 @@ export function HeroSection() {
         <FadeIn delay={0.1} y={30}>
           <span className="font-mono text-[11px] uppercase tracking-[0.24em] text-primary sm:text-xs">{copy.role}</span>
         </FadeIn>
+        <FadeIn delay={0.14} y={20}>
+          <span className="mt-2 block font-mono text-[10px] uppercase tracking-[0.2em] text-foreground/40 sm:text-[11px]">
+            Top 10 · SANS CTF European Championship
+          </span>
+        </FadeIn>
         <FadeIn delay={0.18} y={40}>
           <h1 className="mt-5 font-black uppercase leading-[0.86] tracking-[-0.03em]" style={{ fontSize: "clamp(3rem, 15vw, 12rem)" }}>
             <span className="block text-foreground">Emanuele</span>

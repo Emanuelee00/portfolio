@@ -42,6 +42,7 @@ export type Project = {
   name: string;
   blurb: string;
   tech: string[];
+  award?: string;
   context?: string;
   diagram?: DiagramKind;
   liveUrl?: string;
@@ -120,6 +121,7 @@ export const projects: Project[] = [
     blurb:
       "Solutions from SANS capture-the-flag events — reversing, pwn, web and crypto — collected as sanitised notes.",
     tech: ["Reversing", "pwn", "Web", "Crypto"],
+    award: "Top 10 · SANS CTF European Championship",
     codeUrl: "https://github.com/Emanuelee00/sans-ctf-writeups",
   },
   {

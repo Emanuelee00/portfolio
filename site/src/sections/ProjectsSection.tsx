@@ -70,6 +70,9 @@ function ProjectInfo({ project, flip, index }: { project: Project; flip: boolean
           project.name
         )}
       </h3>
+      {project.award && (
+        <span className="font-mono text-[11px] uppercase tracking-wider text-primary">★ {project.award}</span>
+      )}
       <p className="max-w-md font-light leading-relaxed text-foreground/70">{blurb}</p>
       <div className="flex flex-wrap gap-x-4 gap-y-1 font-mono text-[11px] uppercase tracking-wider text-muted">
         {project.tech.map((t) => (
