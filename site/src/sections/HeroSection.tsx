@@ -1,7 +1,6 @@
 import { FadeIn } from "../components/FadeIn";
 import { ContactButton } from "../components/ContactButton";
 import { useI18n, type Language } from "../i18n";
-import sansCoinFront from "../assets/sans-coin-front.png";
 
 const languages: Language[] = ["fr", "en", "it", "es"];
 
@@ -61,12 +60,6 @@ export function HeroSection() {
       <div className="relative flex flex-1 flex-col justify-center px-6 pb-16 md:px-10">
         <FadeIn delay={0.1} y={30}>
           <span className="font-mono text-[11px] uppercase tracking-[0.24em] text-primary sm:text-xs">{copy.role}</span>
-        </FadeIn>
-        <FadeIn delay={0.14} y={20} className="mt-2 flex items-center gap-2">
-          <img src={sansCoinFront} alt="" className="h-6 w-6 rounded-full sm:h-7 sm:w-7" />
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-foreground/40 sm:text-[11px]">
-            Top 10 · SANS CTF European Championship
-          </span>
         </FadeIn>
         <FadeIn delay={0.18} y={40}>
           <h1 className="mt-5 font-black uppercase leading-[0.86] tracking-[-0.03em]" style={{ fontSize: "clamp(3rem, 15vw, 12rem)" }}>
