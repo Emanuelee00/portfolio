@@ -50,6 +50,22 @@ export type Project = {
 export const projects: Project[] = [
   {
     number: "01",
+    name: "Inception",
+    blurb:
+      "A fully containerised infrastructure built from scratch for École 42: NGINX with TLS, WordPress and MariaDB in separate images, orchestrated with Docker Compose and hand-written Dockerfiles (no ready-made images). Source stays private under École 42's policy — I can walk through the architecture.",
+    tech: ["Docker", "NGINX", "MariaDB"],
+    context: "École 42",
+  },
+  {
+    number: "02",
+    name: "42 Core Projects (C & Python)",
+    blurb:
+      "École 42 systems and algorithms projects — Libft (a C standard-library reimplementation), Push_swap (sorting with a minimal instruction set), plus Python work on multithreading, RAG and constrained decoding. Low-level memory management and debugging throughout. Source stays private under École 42's policy.",
+    tech: ["C", "Python", "Algorithms"],
+    context: "École 42",
+  },
+  {
+    number: "03",
     name: "Fresh Route",
     blurb:
       "Heat-aware pedestrian routing for Marseille — a 3D point-cloud model of the city that finds the coolest walking path on a hot day.",
@@ -58,7 +74,7 @@ export const projects: Project[] = [
     image: freshRouteImg,
   },
   {
-    number: "02",
+    number: "04",
     name: "ETF Portfolio Analyzer",
     blurb:
       "Upload a portfolio spreadsheet and get a full risk-and-allocation breakdown plus a polished Excel report to take away.",
@@ -68,7 +84,7 @@ export const projects: Project[] = [
     image: etfImg,
   },
   {
-    number: "03",
+    number: "05",
     name: "Pacman — Python in the browser",
     blurb:
       "The arcade classic written in Python, compiled to WebAssembly and running in the browser at native speed — no server, no install.",
@@ -78,7 +94,7 @@ export const projects: Project[] = [
     image: pacmanImg,
   },
   {
-    number: "04",
+    number: "06",
     name: "3D Space Portfolio",
     blurb:
       "An earlier take on this site: a navigable galaxy where each star system is a project, built with React Three Fiber.",
@@ -87,7 +103,7 @@ export const projects: Project[] = [
     image: spaceImg,
   },
   {
-    number: "05",
+    number: "07",
     name: "Self-Hosted Deploy Platform",
     blurb:
       "The pipeline behind these projects: a git push builds a Docker image and Traefik serves it on its own HTTPS subdomain.",
@@ -95,7 +111,7 @@ export const projects: Project[] = [
     codeUrl: "https://github.com/Emanuelee00/portfolio",
   },
   {
-    number: "06",
+    number: "08",
     name: "SANS CTF Write-ups",
     blurb:
       "Solutions from SANS capture-the-flag events — reversing, pwn, web and crypto — collected as sanitised notes.",
@@ -103,7 +119,7 @@ export const projects: Project[] = [
     codeUrl: "https://github.com/Emanuelee00/sans-ctf-writeups",
   },
   {
-    number: "07",
+    number: "09",
     name: "Third-Party Risk Analysis (AI)",
     blurb:
       "Client project with CMA CGM and Mistral AI (hackathon). Details are confidential — happy to walk through it in an interview.",
@@ -111,7 +127,7 @@ export const projects: Project[] = [
     context: "CMA CGM × Mistral AI",
   },
   {
-    number: "08",
+    number: "10",
     name: "Maritime Route Optimisation",
     blurb:
       "Client project with CMA CGM (graph-theory workshop). Details are confidential — happy to walk through it in an interview.",
@@ -119,27 +135,11 @@ export const projects: Project[] = [
     context: "CMA CGM",
   },
   {
-    number: "09",
-    name: "Inception",
-    blurb:
-      "A fully containerised infrastructure built from scratch for École 42: NGINX with TLS, WordPress and MariaDB in separate images, orchestrated with Docker Compose and hand-written Dockerfiles (no ready-made images). Source stays private under École 42's policy — I can walk through the architecture.",
-    tech: ["Docker", "NGINX", "MariaDB"],
-    context: "École 42",
-  },
-  {
-    number: "10",
-    name: "42 Core Projects (C & Python)",
-    blurb:
-      "École 42 systems and algorithms projects — Libft (a C standard-library reimplementation), Push_swap (sorting with a minimal instruction set), plus Python work on multithreading, RAG and constrained decoding. Low-level memory management and debugging throughout. Source stays private under École 42's policy.",
-    tech: ["C", "Python", "Algorithms"],
-    context: "École 42",
-  },
-  {
     number: "11",
-    name: "Mosquito Movement Prediction",
+    name: "Qista — Mosquito Risk Prediction",
     blurb:
-      "A 48-hour hackathon MVP (ZEBOX × Qista): predicting mosquito-population movement in space and time from environmental data, pitched to investors at the end.",
-    tech: ["Python", "Spatio-temporal modelling"],
+      "A mosquito-risk prediction platform for Qista, a mosquito-trap company (started at a ZEBOX hackathon, pitched to investors). Three Dockerised services — a map UI, an Express gateway and a FastAPI engine — score locations across France 0–100 from live weather, seasonality and environment type.",
+    tech: ["FastAPI", "Node / Express", "Docker", "OpenWeather API"],
     context: "ZEBOX × Qista",
   },
 ];
