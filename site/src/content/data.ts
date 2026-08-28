@@ -2,6 +2,7 @@ import spaceImg from "../assets/projects/space.jpg";
 import freshRouteImg from "../assets/projects/fresh-route.jpg";
 import etfImg from "../assets/projects/etf.jpg";
 import pacmanImg from "../assets/projects/pacman.jpg";
+import type { DiagramKind } from "../components/ProjectDiagram";
 
 export const services = [
   {
@@ -42,6 +43,7 @@ export type Project = {
   blurb: string;
   tech: string[];
   context?: string;
+  diagram?: DiagramKind;
   liveUrl?: string;
   codeUrl?: string;
   image?: string;
@@ -55,6 +57,7 @@ export const projects: Project[] = [
       "A fully containerised infrastructure built from scratch for École 42: NGINX with TLS, WordPress and MariaDB in separate images, orchestrated with Docker Compose and hand-written Dockerfiles (no ready-made images). Source stays private under École 42's policy — I can walk through the architecture.",
     tech: ["Docker", "NGINX", "MariaDB"],
     context: "École 42",
+    diagram: "inception",
   },
   {
     number: "02",
@@ -108,6 +111,7 @@ export const projects: Project[] = [
     blurb:
       "The pipeline behind these projects: a git push builds a Docker image and Traefik serves it on its own HTTPS subdomain.",
     tech: ["Docker", "Traefik", "CI/CD", "Linux"],
+    diagram: "pipeline",
     codeUrl: "https://github.com/Emanuelee00/portfolio",
   },
   {
@@ -141,5 +145,7 @@ export const projects: Project[] = [
       "A mosquito-risk prediction platform for Qista, a mosquito-trap company (started at a ZEBOX hackathon, pitched to investors). Three Dockerised services — a map UI, an Express gateway and a FastAPI engine — score locations across France 0–100 from live weather, seasonality and environment type.",
     tech: ["FastAPI", "Node / Express", "Docker", "OpenWeather API"],
     context: "ZEBOX × Qista",
+    diagram: "qista",
+    codeUrl: "https://github.com/Solemil/qista",
   },
 ];

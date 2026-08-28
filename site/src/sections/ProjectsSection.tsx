@@ -1,12 +1,17 @@
 import { FadeIn } from "../components/FadeIn";
+import { ProjectDiagram } from "../components/ProjectDiagram";
 import { projects, type Project } from "../content/data";
 import { useI18n } from "../i18n";
 
 function ProjectMedia({ project }: { project: Project }) {
   if (!project.image) {
     return (
-      <div className="flex aspect-[16/10] items-center justify-center rounded-3xl border border-border bg-surface">
-        <span className="font-mono text-sm text-muted">{project.context ?? project.codeUrl?.replace("https://github.com/", "")}</span>
+      <div className="flex aspect-[16/10] items-center justify-center overflow-hidden rounded-3xl border border-border bg-surface p-6">
+        {project.diagram ? (
+          <ProjectDiagram kind={project.diagram} />
+        ) : (
+          <span className="font-mono text-sm text-muted">{project.context ?? project.codeUrl?.replace("https://github.com/", "")}</span>
+        )}
       </div>
     );
   }
