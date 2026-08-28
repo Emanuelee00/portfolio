@@ -55,10 +55,10 @@ function ProjectLinks({ project }: { project: Project }) {
   );
 }
 
-function ProjectInfo({ project, flip, index }: { project: Project; flip: boolean; index: number }) {
+function ProjectInfo({ project, flip }: { project: Project; flip: boolean }) {
   const { copy } = useI18n();
   const url = project.liveUrl ?? project.codeUrl;
-  const blurb = copy.blurbs[index] ?? project.blurb;
+  const blurb = copy.blurbs[projects.indexOf(project)] ?? project.blurb;
   return (
     <div className={`flex flex-col gap-4 md:w-2/5 ${flip ? "md:items-end md:text-right" : ""}`}>
       <h3 className="text-2xl font-bold tracking-tight sm:text-3xl">
@@ -84,26 +84,22 @@ function ProjectInfo({ project, flip, index }: { project: Project; flip: boolean
   );
 }
 
-const SHOW_GHOST_NUMBER = false;
-
 function ProjectRow({ project, index }: { project: Project; index: number }) {
   const flip = index % 2 === 1;
   return (
     <FadeIn y={40} className="relative border-t border-foreground/10 py-12 md:py-16">
-      {SHOW_GHOST_NUMBER && (
-        <span
-          aria-hidden
-          className={`pointer-events-none absolute -top-6 font-black ${flip ? "left-0 md:left-4" : "right-0 md:right-4"}`}
-          style={{ fontSize: "clamp(5rem, 12vw, 11rem)", color: "rgba(242,242,242,0.045)" }}
-        >
-          {String(index + 1).padStart(2, "0")}
-        </span>
-      )}
+      <span
+        aria-hidden
+        className={`pointer-events-none absolute -top-6 font-black ${flip ? "left-0 md:left-4" : "right-0 md:right-4"}`}
+        style={{ fontSize: "clamp(5rem, 12vw, 11rem)", color: "rgba(242,242,242,0.045)" }}
+      >
+        {String(index + 1).padStart(2, "0")}
+      </span>
       <div className={`relative flex flex-col gap-8 md:items-center md:gap-14 ${flip ? "md:flex-row-reverse" : "md:flex-row"}`}>
         <div className="md:w-3/5">
           <ProjectMedia project={project} />
         </div>
-        <ProjectInfo project={project} flip={flip} index={index} />
+        <ProjectInfo project={project} flip={flip} />
       </div>
     </FadeIn>
   );
@@ -120,9 +116,11 @@ export function ProjectsSection() {
           </h2>
           <span className="font-mono text-[11px] uppercase tracking-wider text-muted">{copy.selected}</span>
         </div>
-        {projects.map((project, i) => (
-          <ProjectRow key={project.name} project={project} index={i} />
-        ))}
+        {projects
+          .filter((project) => !project.hidden)
+          .map((project, i) => (
+            <ProjectRow key={project.name} project={project} index={i} />
+          ))}
       </div>
     </section>
   );

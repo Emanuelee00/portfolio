@@ -42,6 +42,7 @@ export type Project = {
   name: string;
   blurb: string;
   tech: string[];
+  hidden?: boolean;
   award?: string;
   context?: string;
   diagram?: DiagramKind;
@@ -130,6 +131,7 @@ export const projects: Project[] = [
       "Client project with CMA CGM and Mistral AI (hackathon). Details are confidential.",
     tech: ["Mistral workflows", "React", "LLM"],
     context: "CMA CGM × Mistral AI",
+    hidden: true,
   },
   {
     name: "Maritime Route Optimisation",
@@ -137,6 +139,7 @@ export const projects: Project[] = [
       "Client project with CMA CGM (graph-theory workshop). Details are confidential.",
     tech: ["Python", "Graph theory"],
     context: "CMA CGM",
+    hidden: true,
   },
   {
     name: "Qista — Mosquito Risk Map",
