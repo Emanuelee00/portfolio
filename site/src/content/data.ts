@@ -38,7 +38,6 @@ export const services = [
 ];
 
 export type Project = {
-  number: string;
   name: string;
   blurb: string;
   tech: string[];
@@ -51,7 +50,6 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    number: "01",
     name: "Inception",
     blurb:
       "A fully containerised infrastructure built from scratch for École 42: NGINX with TLS, WordPress and MariaDB in separate images, orchestrated with Docker Compose and hand-written Dockerfiles (no ready-made images). Source stays private under École 42's policy — I can walk through the architecture.",
@@ -60,7 +58,6 @@ export const projects: Project[] = [
     diagram: "inception",
   },
   {
-    number: "02",
     name: "42 Core Projects (C & Python)",
     blurb:
       "École 42 systems and algorithms projects — Libft (a C standard-library reimplementation), Push_swap (sorting with a minimal instruction set), plus Python work on multithreading, RAG and constrained decoding. Low-level memory management and debugging throughout. Source stays private under École 42's policy.",
@@ -68,7 +65,6 @@ export const projects: Project[] = [
     context: "École 42",
   },
   {
-    number: "03",
     name: "Fresh Route",
     blurb:
       "Heat-aware pedestrian routing for Marseille — a 3D point-cloud model of the city that finds the coolest walking path on a hot day.",
@@ -77,7 +73,14 @@ export const projects: Project[] = [
     image: freshRouteImg,
   },
   {
-    number: "04",
+    name: "LangGraph Idea Workflow",
+    blurb:
+      "A LangGraph pipeline that turns a topic into a validated product idea: web-search the real pains, draft an idea, sharpen it into one falsifiable claim, test it on a simulated customer panel, loop up to 3× — then pause at a human gate to build, refine or abandon. Not a website: run it locally with make install then make run (needs uv and an NVIDIA API key in .env — see the README).",
+    tech: ["LangGraph", "Python", "LLM", "CLI"],
+    diagram: "langgraph",
+    codeUrl: "https://github.com/Emanuelee00/lang-graph-ideas-workflow",
+  },
+  {
     name: "ETF Portfolio Analyzer",
     blurb:
       "Upload a portfolio spreadsheet and get a full risk-and-allocation breakdown plus a polished Excel report to take away.",
@@ -87,7 +90,6 @@ export const projects: Project[] = [
     image: etfImg,
   },
   {
-    number: "05",
     name: "Pacman — Python in the browser",
     blurb:
       "The arcade classic written in Python, compiled to WebAssembly and running in the browser at native speed — no server, no install.",
@@ -97,7 +99,6 @@ export const projects: Project[] = [
     image: pacmanImg,
   },
   {
-    number: "06",
     name: "3D Space Portfolio",
     blurb:
       "An earlier take on this site: a navigable galaxy where each star system is a project, built with React Three Fiber.",
@@ -106,7 +107,6 @@ export const projects: Project[] = [
     image: spaceImg,
   },
   {
-    number: "07",
     name: "Self-Hosted Deploy Platform",
     blurb:
       "The pipeline behind these projects: a git push builds a Docker image and Traefik serves it on its own HTTPS subdomain.",
@@ -115,7 +115,6 @@ export const projects: Project[] = [
     codeUrl: "https://github.com/Emanuelee00/portfolio",
   },
   {
-    number: "08",
     name: "SANS CTF Write-ups",
     blurb:
       "Solutions from SANS capture-the-flag events — reversing, pwn, web and crypto — collected as sanitised notes.",
@@ -123,7 +122,6 @@ export const projects: Project[] = [
     codeUrl: "https://github.com/Emanuelee00/sans-ctf-writeups",
   },
   {
-    number: "09",
     name: "Third-Party Risk Analysis (AI)",
     blurb:
       "Client project with CMA CGM and Mistral AI (hackathon). Details are confidential — happy to walk through it in an interview.",
@@ -131,7 +129,6 @@ export const projects: Project[] = [
     context: "CMA CGM × Mistral AI",
   },
   {
-    number: "10",
     name: "Maritime Route Optimisation",
     blurb:
       "Client project with CMA CGM (graph-theory workshop). Details are confidential — happy to walk through it in an interview.",
@@ -139,11 +136,10 @@ export const projects: Project[] = [
     context: "CMA CGM",
   },
   {
-    number: "11",
-    name: "Qista — Mosquito Risk Prediction",
+    name: "Qista — Mosquito Risk Map",
     blurb:
-      "A mosquito-risk prediction platform for Qista, a mosquito-trap company (started at a ZEBOX hackathon, pitched to investors). Three Dockerised services — a map UI, an Express gateway and a FastAPI engine — score locations across France 0–100 from live weather, seasonality and environment type.",
-    tech: ["FastAPI", "Node / Express", "Docker", "OpenWeather API"],
+      "A Europe-wide mosquito-risk surveillance map, built for Qista (a mosquito-trap company) at a ZEBOX hackathon. Three Dockerised services — a Leaflet map UI, an Express gateway and a FastAPI engine — grade ~1,300 regions A–E from weather, seasonality and species-observation data (Open-Meteo, GBIF, iNaturalist), with a live top-10 ranking.",
+    tech: ["FastAPI", "Node / Express", "Docker", "Leaflet"],
     context: "ZEBOX × Qista",
     diagram: "qista",
     codeUrl: "https://github.com/Solemil/qista",

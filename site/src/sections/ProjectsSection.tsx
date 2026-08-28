@@ -55,10 +55,10 @@ function ProjectLinks({ project }: { project: Project }) {
   );
 }
 
-function ProjectInfo({ project, flip }: { project: Project; flip: boolean }) {
+function ProjectInfo({ project, flip, index }: { project: Project; flip: boolean; index: number }) {
   const { copy } = useI18n();
   const url = project.liveUrl ?? project.codeUrl;
-  const blurb = copy.blurbs[Number(project.number) - 1] ?? project.blurb;
+  const blurb = copy.blurbs[index] ?? project.blurb;
   return (
     <div className={`flex flex-col gap-4 md:w-2/5 ${flip ? "md:items-end md:text-right" : ""}`}>
       <h3 className="text-2xl font-bold tracking-tight sm:text-3xl">
@@ -90,13 +90,13 @@ function ProjectRow({ project, index }: { project: Project; index: number }) {
         className="pointer-events-none absolute -top-6 right-0 font-black md:right-4"
         style={{ fontSize: "clamp(5rem, 12vw, 11rem)", color: "rgba(242,242,242,0.045)" }}
       >
-        {project.number}
+        {String(index + 1).padStart(2, "0")}
       </span>
       <div className={`relative flex flex-col gap-8 md:items-center md:gap-14 ${flip ? "md:flex-row-reverse" : "md:flex-row"}`}>
         <div className="md:w-3/5">
           <ProjectMedia project={project} />
         </div>
-        <ProjectInfo project={project} flip={flip} />
+        <ProjectInfo project={project} flip={flip} index={index} />
       </div>
     </FadeIn>
   );
@@ -114,7 +114,7 @@ export function ProjectsSection() {
           <span className="font-mono text-[11px] uppercase tracking-wider text-muted">{copy.selected}</span>
         </div>
         {projects.map((project, i) => (
-          <ProjectRow key={project.number} project={project} index={i} />
+          <ProjectRow key={project.name} project={project} index={i} />
         ))}
       </div>
     </section>
