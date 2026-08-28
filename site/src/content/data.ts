@@ -101,7 +101,7 @@ export const projects: Project[] = [
     image: pacmanImg,
   },
   {
-    name: "3D Space Portfolio",
+    name: "3D Space Portfolio (ex-portfolio)",
     blurb:
       "An earlier take on this site: a navigable galaxy where each star system is a project, built with React Three Fiber.",
     tech: ["React", "Three.js", "React Three Fiber"],

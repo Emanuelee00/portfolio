@@ -84,17 +84,21 @@ function ProjectInfo({ project, flip, index }: { project: Project; flip: boolean
   );
 }
 
+const SHOW_GHOST_NUMBER = false;
+
 function ProjectRow({ project, index }: { project: Project; index: number }) {
   const flip = index % 2 === 1;
   return (
     <FadeIn y={40} className="relative border-t border-foreground/10 py-12 md:py-16">
-      <span
-        aria-hidden
-        className="pointer-events-none absolute -top-6 right-0 font-black md:right-4"
-        style={{ fontSize: "clamp(5rem, 12vw, 11rem)", color: "rgba(242,242,242,0.045)" }}
-      >
-        {String(index + 1).padStart(2, "0")}
-      </span>
+      {SHOW_GHOST_NUMBER && (
+        <span
+          aria-hidden
+          className={`pointer-events-none absolute -top-6 font-black ${flip ? "left-0 md:left-4" : "right-0 md:right-4"}`}
+          style={{ fontSize: "clamp(5rem, 12vw, 11rem)", color: "rgba(242,242,242,0.045)" }}
+        >
+          {String(index + 1).padStart(2, "0")}
+        </span>
+      )}
       <div className={`relative flex flex-col gap-8 md:items-center md:gap-14 ${flip ? "md:flex-row-reverse" : "md:flex-row"}`}>
         <div className="md:w-3/5">
           <ProjectMedia project={project} />
