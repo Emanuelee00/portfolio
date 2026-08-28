@@ -142,6 +142,7 @@ export const projects: Project[] = [
     tech: ["FastAPI", "Node / Express", "Docker", "Leaflet"],
     context: "ZEBOX × Qista",
     diagram: "qista",
-    codeUrl: "https://github.com/Solemil/qista",
+    liveUrl: "https://qista.92-4-217-42.sslip.io",
+    codeUrl: "https://github.com/Emanuelee00/qista_portfolio",
   },
 ];
