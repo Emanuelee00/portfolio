@@ -125,14 +125,14 @@ export const projects: Project[] = [
   {
     name: "Third-Party Risk Analysis (AI)",
     blurb:
-      "Client project with CMA CGM and Mistral AI (hackathon). Details are confidential — happy to walk through it in an interview.",
+      "Client project with CMA CGM and Mistral AI (hackathon). Details are confidential.",
     tech: ["Mistral workflows", "React", "LLM"],
     context: "CMA CGM × Mistral AI",
   },
   {
     name: "Maritime Route Optimisation",
     blurb:
-      "Client project with CMA CGM (graph-theory workshop). Details are confidential — happy to walk through it in an interview.",
+      "Client project with CMA CGM (graph-theory workshop). Details are confidential.",
     tech: ["Python", "Graph theory"],
     context: "CMA CGM",
   },

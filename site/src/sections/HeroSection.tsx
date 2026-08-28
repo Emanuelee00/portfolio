@@ -73,10 +73,6 @@ export function HeroSection() {
           </FadeIn>
           <FadeIn delay={0.44} y={20}><ContactButton /></FadeIn>
         </div>
-        <FadeIn delay={0.56} y={16} className="mt-10 flex items-center gap-2.5">
-          <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-          <span className="font-mono text-[11px] tracking-wide text-muted">{copy.availability}</span>
-        </FadeIn>
       </div>
     </section>
   );
