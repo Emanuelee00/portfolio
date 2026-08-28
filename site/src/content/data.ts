@@ -3,6 +3,7 @@ import freshRouteImg from "../assets/projects/fresh-route.jpg";
 import etfImg from "../assets/projects/etf.jpg";
 import pacmanImg from "../assets/projects/pacman.jpg";
 import qistaImg from "../assets/projects/qista.jpg";
+import sansCoinImg from "../assets/projects/sans-coin.jpg";
 import type { DiagramKind } from "../components/ProjectDiagram";
 
 export const services = [
@@ -123,6 +124,7 @@ export const projects: Project[] = [
     tech: ["Reversing", "pwn", "Web", "Crypto"],
     award: "Top 10 · SANS CTF European Championship",
     codeUrl: "https://github.com/Emanuelee00/sans-ctf-writeups",
+    image: sansCoinImg,
   },
   {
     name: "Third-Party Risk Analysis (AI)",
