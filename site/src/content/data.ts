@@ -2,6 +2,7 @@ import spaceImg from "../assets/projects/space.jpg";
 import freshRouteImg from "../assets/projects/fresh-route.jpg";
 import etfImg from "../assets/projects/etf.jpg";
 import pacmanImg from "../assets/projects/pacman.jpg";
+import qistaImg from "../assets/projects/qista.jpg";
 import type { DiagramKind } from "../components/ProjectDiagram";
 
 export const services = [
@@ -141,8 +142,8 @@ export const projects: Project[] = [
       "A Europe-wide mosquito-risk surveillance map, built for Qista (a mosquito-trap company) at a ZEBOX hackathon. Three Dockerised services — a Leaflet map UI, an Express gateway and a FastAPI engine — grade ~1,300 regions A–E from weather, seasonality and species-observation data (Open-Meteo, GBIF, iNaturalist), with a live top-10 ranking.",
     tech: ["FastAPI", "Node / Express", "Docker", "Leaflet"],
     context: "ZEBOX × Qista",
-    diagram: "qista",
     liveUrl: "https://qista.92-4-217-42.sslip.io",
     codeUrl: "https://github.com/Emanuelee00/qista_portfolio",
+    image: qistaImg,
   },
 ];

@@ -1,15 +1,13 @@
-export type DiagramKind = "inception" | "qista" | "pipeline" | "langgraph";
+export type DiagramKind = "inception" | "pipeline" | "langgraph";
 
 const NODES: Record<DiagramKind, { label: string; accent?: boolean; dashed?: boolean }[]> = {
   inception: [{ label: "nginx · TLS", accent: true }, { label: "WordPress" }, { label: "MariaDB" }],
-  qista: [{ label: "map UI" }, { label: "Express" }, { label: "FastAPI", accent: true }, { label: "OpenWeather", dashed: true }],
   pipeline: [{ label: "git push", accent: true }, { label: "build" }, { label: "Traefik" }, { label: "HTTPS" }],
   langgraph: [{ label: "research" }, { label: "draft" }, { label: "panel" }, { label: "gate", accent: true }, { label: "build" }],
 };
 
 const CAPTION: Record<DiagramKind, string> = {
   inception: "docker-compose",
-  qista: "request flow",
   pipeline: "push → live",
   langgraph: "human-in-the-loop",
 };
