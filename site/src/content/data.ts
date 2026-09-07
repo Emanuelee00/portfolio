@@ -72,7 +72,6 @@ export const projects: Project[] = [
     blurb:
       "Heat-aware pedestrian routing for Marseille — a 3D point-cloud model of the city that finds the coolest walking path on a hot day.",
     tech: ["React", "Three.js", "Python", "Routing engine"],
-    liveUrl: "https://fresh-route.92-4-217-42.sslip.io",
     image: freshRouteImg,
   },
   {
@@ -88,7 +87,6 @@ export const projects: Project[] = [
     blurb:
       "Upload a portfolio spreadsheet and get a full risk-and-allocation breakdown plus a polished Excel report to take away.",
     tech: ["React", "FastAPI", "pandas"],
-    liveUrl: "https://etf.92-4-217-42.sslip.io",
     codeUrl: "https://github.com/Emanuelee00/Project_ETF",
     image: etfImg,
   },
@@ -97,7 +95,7 @@ export const projects: Project[] = [
     blurb:
       "The arcade classic written in Python, compiled to WebAssembly and running in the browser at native speed — no server, no install.",
     tech: ["Python", "Pygame", "WASM / pygbag"],
-    liveUrl: "https://pacman.92-4-217-42.sslip.io",
+    liveUrl: "https://emanuelee00.github.io/Pacman/",
     codeUrl: "https://github.com/Emanuelee00/Pacman",
     image: pacmanImg,
   },
@@ -106,7 +104,7 @@ export const projects: Project[] = [
     blurb:
       "An earlier take on this site: a navigable galaxy where each star system is a project, built with React Three Fiber.",
     tech: ["React", "Three.js", "React Three Fiber"],
-    liveUrl: "https://portfolio.92-4-217-42.sslip.io",
+    liveUrl: "https://emanuelee00.github.io/Portfolio-git/",
     image: spaceImg,
   },
   {
@@ -147,7 +145,6 @@ export const projects: Project[] = [
       "A Europe-wide mosquito-risk surveillance map, built for Qista (a mosquito-trap company) at a ZEBOX hackathon. Three Dockerised services — a Leaflet map UI, an Express gateway and a FastAPI engine — grade ~1,300 regions A–E from weather, seasonality and species-observation data (Open-Meteo, GBIF, iNaturalist), with a live top-10 ranking.",
     tech: ["FastAPI", "Node / Express", "Docker", "Leaflet"],
     context: "ZEBOX × Qista",
-    liveUrl: "https://qista.92-4-217-42.sslip.io",
     codeUrl: "https://github.com/Emanuelee00/qista_portfolio",
     image: qistaImg,
   },
