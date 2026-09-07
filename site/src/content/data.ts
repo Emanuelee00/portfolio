@@ -145,6 +145,7 @@ export const projects: Project[] = [
       "A Europe-wide mosquito-risk surveillance map, built for Qista (a mosquito-trap company) at a ZEBOX hackathon. Three Dockerised services — a Leaflet map UI, an Express gateway and a FastAPI engine — grade ~1,300 regions A–E from weather, seasonality and species-observation data (Open-Meteo, GBIF, iNaturalist), with a live top-10 ranking.",
     tech: ["FastAPI", "Node / Express", "Docker", "Leaflet"],
     context: "ZEBOX × Qista",
+    liveUrl: "https://emanuelee00.github.io/qista_portfolio/",
     codeUrl: "https://github.com/Emanuelee00/qista_portfolio",
     image: qistaImg,
   },
