@@ -72,6 +72,7 @@ export const projects: Project[] = [
     blurb:
       "Heat-aware pedestrian routing for Marseille — a 3D point-cloud model of the city that finds the coolest walking path on a hot day.",
     tech: ["React", "Three.js", "Python", "Routing engine"],
+    liveUrl: "https://emanuelee00.github.io/green_site/",
     codeUrl: "https://github.com/Emanuelee00/green_site",
     image: freshRouteImg,
   },
